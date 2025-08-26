@@ -17,4 +17,11 @@ interface TaskDao {
 
     @Query("SELECT * FROM task ORDER BY id ASC")
     fun getTasks(): Flow<List<Task>>
+
+    @Query("SELECT * FROM task ORDER BY title ASC")
+    fun getTasksOrderedByTitle(): Flow<List<Task>>
+
+    @Query("SELECT * FROM task ORDER BY date ASC")
+    fun getTasksOrderedByDate(): Flow<List<Task>>
+
 }
