@@ -13,7 +13,7 @@ interface TaskDao {
     suspend fun upsertTask(task: Task)
 
     @Delete
-    suspend fun deleteTask(task: Task)
+    suspend fun deleteTask(task: Task): Int
 
     @Query("SELECT * FROM task ORDER BY id ASC")
     fun getTasks(): Flow<List<Task>>

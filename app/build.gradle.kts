@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.to_dolist"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.to_dolist"
@@ -42,10 +42,11 @@ android {
 
 dependencies {
 
-    val roomVersion = "2.5.0"
-    kapt("androidx.room:room-compiler:$roomVersion")
-    implementation("androidx.room:room-ktx:$roomVersion")
+    val roomVersion = "2.6.1"
 
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
 
 
 
